@@ -17,9 +17,9 @@ class UserTest < ActiveSupport::TestCase
     assert_not user.valid?
   end
 
-  test 'destory user should destroy linked product' do 
-    assert_differnce('Product.count', -1) do 
-      users(:one).destroy
+  test 'destroy user should destroy linked product' do
+    assert_difference('Product.count', -1) do
+    users(:one).destroy
     end
-  end
+    end
 end
